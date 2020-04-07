@@ -95,9 +95,9 @@ jobs:
           # 
           # 编译x64固件:
           cat >> .config <<EOF
-          CONFIG_TARGET_Broadcom BCM27xx=y
-          CONFIG_TARGET_Broadcom BCM27xx_BCM2710 boards (64 bit)=y
-          CONFIG_TARGET_Broadcom BCM27xx_BCM2710 boards (64 bit)_Raspberry Pi 2B-1.2/3B/3B+/3CM=y
+          CONFIG_TARGET_x86=y
+          CONFIG_TARGET_x86_64=y
+          CONFIG_TARGET_x86_64_Generic=y
           EOF
           # 固件压缩:
           cat >> .config <<EOF
