@@ -10,14 +10,17 @@
 name: OpenWrt-CI
 
 on:
+  release:
+    types: published
   push:
-    branches: 
+    branches:
       - master
-  #     ↑↑↑ 改成你的分支名, 一般是master
-  # schedule:
-  #   - cron: 0 20 * * *
-  # release:
-  #   types: [published]
+    paths:
+      - '.config'
+#  schedule:
+#    - cron: 0 8 * * 5
+  watch:
+    types: started
 
 jobs:
   build:
